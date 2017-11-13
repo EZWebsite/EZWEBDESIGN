@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="" lang="de-DE">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Privatkelterei Lehen</title>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="LEHEN.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	        //Add smooth scrolling to all links
+	        $("a").on('click', function(event){
+	                if(this.hash !== ""){
+	                        event.preventDefault();
+
+	                        var hash = this.hash;
+
+	                        $('html, body').animate({
+	                                scrollTop: $(hash).offset().top
+	                        }, 1200, function(){
+	                                window.location.hash = hash;
+	                        });
+	                }
+	        });
+	});
+	</script>
+	<script>
+	function initMap() {
+		var uluru = {lat: -25.363, lng: 131.044};
+		var map = new google.maps.Map(document.getElementById('map'), {
+  		zoom: 4,
+  		center: uluru
+	});
+	var marker = new google.maps.Marker({
+  	position: uluru,
+  	map: map
+	});
+	}
+
+	</script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHn2aFJXa92yLJCa3mImjZ4wjtL8hSjgk&callback=initMap">
+	/*<!--https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap-->*/
+    </script>
+
+	<script>
+	function myMove() {
+    var elem = document.getElementById("animate-photo");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+    function frame() {
+        if (pos == 350) {
+            clearInterval(id);
+        } else {
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos - 'px';
+        }
+    }
+	}
+	</script>
+
+	<script>
+	$(window).scroll(function() {
+	  $(".slideanim").each(function(){
+	    var pos = $(this).offset().top;
+
+	    var winTop = $(window).scrollTop();
+	    if (pos < winTop + 600) {
+	      $(this).addClass("slide");
+	    }
+	  });
+	});
+	</script>
+
+
+	<style>
+	/*Stylesheet*/
+
+	#map{
+		height: 400px;
+		width: 50%;
+	}
+	.parallax_1, .parallax_2, .parallax_3 {
+;
+	       /* Set a specific height */
+	       min-height: 500px;
+
+	       /*Create the parallax scrolling effect */
+	       position: absoulte;
+	       opacity: 0.8;
+	       background-attachment: fixed;
+	       background-position: center;
+	       background-repeat: no-repeat;
+	       background-size: cover;
+
+	}
+
+
+	h1{
+		/*color: #7C7978;*/
+		color: #FFF;
+		font-weight: bold;
+		font-size: 34px;
+		text-align: center;
+		top: 20%;
+		position: relative;
+		background-color: #B4B5B7;
+		letter-spacing: 5px;
+
+	}
+
+	.menu-position {
+		position: fixed;
+		background-color: #87C82F;
+	}
+
+	.menu{
+		/*position: fixed;*/
+		padding: 5px 10px;
+		font-size: 20px;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		border-radius: 0px;
+		background-color: #87C82F;
+		margin: 0px;
+		color: #FFF;
+		/*float: left;*/
+  		/*display: block;*/
+		text-align: center;
+		top: 0;
+		/*overflow: visible;*/
+	}
+
+	.menu:hover {
+		background-color: #FFF;
+		/*color: #A45300;*/
+		color: #87C82F;
+	}
+
+	.menu:active {
+		background-color: #87C208;
+	    color: #FFF;
+		position:fixed;
+	}
+
+	.parallax_1 {
+	  background-image: url("resources/images/lehen_produkte_header_1200-1024x346.jpg");
+	  min-height: 100%;
+
+	}
+
+	.parallax_2 {
+		background-image: url("resources/images/lehen_gebäude_1.jpg");
+		min-height: 500px;
+	}
+
+	.caption {
+	  position: absolute;
+	  left: 34%;
+	  top: 35%;
+	  width: 32%;
+	  height: 81%;
+	  text-align: center;
+	  color: #000;
+
+	}
+	.navbar li a, .navbar .navbar-brand{
+        color: #87C82F !important;
+    }
+    .navbar li a:hover, .navbar-nav li.active a {
+        color: #FFFFFF !important;
+        background-color: #87C82F !important;
+    }
+    .navbar-default .navbar-toggle{
+        border-color: transparent;
+        color: #FFFFFF !important;
+    }
+
+	.text{
+		position: relative;
+		top: 0%;
+		padding: 40px;
+		left: 0;
+		color: #FFF;
+		text-align: justify;
+	}
+	@import url('http://fonts.googleapis.com/css?family=Comfortaa');
+	/*<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">*/
+
+	body, html {
+	  height: 100%;
+	  margin: 0;
+	  font: 400 17px/1.8 "Lato", sans-serif;
+	  /*font-family: 'Comfortaa';*/
+	  color: #FFF;
+	  background-color: #87C82F;
+	}
+
+	.slideanim {visibility:hidden;}
+    .slide {
+        /* The name of the animation */
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        /* The duration of the animation */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Make the element visible */
+        visibility: visible;
+    }
+
+    /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+	</style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Obstkelterei LEHEN</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section_ABOUT-US">ÜBER UNS</a></li>
+                    <li><a href="#section_FAMILY">FAMILIE</a></li>
+                    <li><a href="#section_OPEN">ÖFFNUNGSZEITEN</a></li>
+                    <li><a href="#section_CONTACT">KONTAKT</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="parallax_1">
+  <div class="caption">
+	  <img src="resources/images/lehen_transparent.png" style="width: 320px; height= 200px; " align="middle" alt="KELTEREI LOGO"></img>
+  </div>
+</div>
+
+<div class="container text" id="section_ABOUT-US">
+	<div class="row">
+		<div class="col-sm-6" style="color: #FFF; padding: 30px;">In der Kelterei Lehen setzen wir seit mehr als 50 Jahren auf Früchte heimischer Obstwiesen, die auf schonendste Art ohne Zusatz von Konservierungsstoffen zu hochwertigen Säften verarbeitet werden. Es gibt kaum eine Frucht, die man bei uns nicht in der Flasche bekommt. Wir legen großen Wert darauf, bei allen Frucht- und Obstsorten immer möglichst 100% Fruchtanteil zu erreichen.</div>
+		<div class="col-sm-6" style="color: #FFF; padding: 30px 0px 20px 20px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.<br>Daniel Rinas ist unser bester Kunde. Erfahrung mit Anime und Eskortdamen hat er mit uns allen geteilt.
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12"></div>
+		<div class="col-sm-12"></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8"></div>
+		<div class="col-sm-4"><img src="resources/images/logo_genussregion2013.jpg" alt="Gütesiegel"></div>
+	</div>
+</div>
+
+<div class="parallax_2">
+
+</div>
+
+
+<div class="text" id="section_FAMILY">
+<p><br>Unsere Kelterei ist ein richtiger Familienbetrieb mit insgesamt vier Handwerksmeistern. Sie wird von uns, Thorsten und Christine Eisenhuth, unseren Eltern und unseren Angestellten in einem Team mit voller Leidenschaft für Obst und Früchte betrieben.</p>
+<p><br>Das meiste Obst wird uns von Landwirten und Privatpersonen aus der Umgebung geliefert. Diese holen sich einen Teil davon nach und nach als Lehen-Saft wieder ab. Der andere Teil landet im regionalen Handel oder kann in unserem Getränkemarkt direkt an der Kelterei gekauft werden. Dort bieten wir für die Liebhaber der alkoholischen Frucht-Varianten übrigens auch Beerenweine, Liköre und Brände aus dem Obst an.<br></p>
+	<div class="container">
+		<div class="row">Alkohol, Saft, Alkohol aus Saft, Saftalkohol<br>Weine, Säfte, Liquöre und Branntwein.</div>
+		<div class="row">
+			<div class="col-sm-9"></div>
+			<div class="col-sm-3 slideanim"><img src="resources/images/lehen_eisenhuth_512_rund-150x150.png" alt="Thorsten_Eisenhuth"><br></div>
+		<div class="col-sm-8"></div>
+		<div class="col-sm-4" style="padding: 0px 0px 0px 70px;"><p style="font-size: 18px; color:#E4D5E7;">CEO,Thorsten Eisenhuth</p></div>
+		</div>
+	</div>
+</div>
+
+<div class="container" style="padding:60px;" id="section_OPEN">
+	<div class="row" style="color: #FFF;">
+		<div class="col-sm-6 padding: 50px;"><p>THORSTEN EISENHUTH<br>Junior Chef<br></p><p><br>PRIVATKELTEREI LEHEN<br>Lehen 11, 95446 Lehen/Weidenberg<br></p><p><br>ÖFFNUNGSZEITEN GETRÄNKEMARKT</p><p style="top-marign: 4px; color: #FFF;">MO - FR: 7:00 - 18:00<br>SA: 10:00 - 18:00</p></div>
+		<div class="col-sm-6 padding: 50px;" id="map"></div>
+	</div>
+</div>
+
+<div style="position:relative; padding: 40px;" id="section_CONTACT">
+        <div style="font-size:14px; color: #FFF;">
+
+
+                <p style="font-size:25px"><strong>Kontakt</strong></p>
+                <p>0921/654321</p>
+                <p>John@Maine.cc</p>
+                <p>Wiener Straße 154</p>
+                <p>95444 Bayreuth, BY</p>
+
+        </div>
+</div>
+
+<div class="" style="position:relative;" id="section_IMPRESS">
+        <div class="" style="color: #FFF; font-size:14px">
+                <h4 style="background-color: #87C82F"><strong>IMPRESSUM</strong></h4>
+
+                <h5 style="color:#FFF"><br><strong>Betreiber Website</strong></h5>
+                <p><strong>Geschäfstsführer</strong>Obstkelterei Lehen</p>
+                <p><strong>Gegründet</strong> 1987</p>
+                <p><strong>Bildquellen</strong> Internet</p>
+
+                <a href="nutzungsbedingungen.html" style="color:#ABEF12">Nutzungsbedingungen</a>
+
+                <h5 style="color:#F7F7F7"><br><strong>Entwicklung/IT</strong></h5>
+                <p>WEBDESIGN_ELiTe420 GmbH</p>
+                <p>Bayrische Str.18</p>
+                <p>95448 Bayreuth</p>
+                <p>0921/777222</p>
+                <p>WEBDESIGN_@ELiTe420.com</p>
+
+                <p style="color:#CCC">(C) ALL RIGHTS RESERVED</p>
+        </div>
+</div>
+
+</body>
+</html>
